@@ -1,0 +1,67 @@
+{
+  "name": "powerbi-client-angular",
+  "version": "5.0.0",
+  "description": "Angular wrapper for powerbi-client library",
+  "main": "./dist/powerbi-client-angular/bundles/powerbi-client-angular.umd.js",
+  "typings": "./dist/powerbi-client-angular/powerbi-client-angular.d.ts",
+  "keywords": [
+    "microsoft",
+    "powerbi",
+    "embedded",
+    "angular",
+    "analytics",
+    "report",
+    "authoring"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/powerbi-client-angular.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "ng build",
+    "demo": "cd ../demo && npm install && ng serve",
+    "package": "ng build && cd dist/powerbi-client-angular && npm pack",
+    "test": "ng test"
+  },
+  "publishConfig": {
+    "tag": "beta"
+  },
+  "dependencies": {
+    "powerbi-client": "^2.23.1",
+    "tslib": "^2.1.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^17.3.9",
+    "@angular-eslint/builder": "^17.5.3",
+    "@angular-eslint/eslint-plugin": "^17.5.3",
+    "@angular-eslint/eslint-plugin-template": "^17.5.3",
+    "@angular-eslint/schematics": "^17.5.3",
+    "@angular-eslint/template-parser": "^17.5.3",
+    "@angular/cli": "^17.3.9",
+    "@angular/compiler": "^17.3.12",
+    "@angular/compiler-cli": "^17.3.12",
+    "@angular/core": "^17.3.12",
+    "@angular/platform-browser": "^17.3.12",
+    "@angular/platform-browser-dynamic": "^17.3.12",
+    "@types/jasmine": "~3.6.0",
+    "@types/node": "^18.19.51",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsdoc": "^46.10.1",
+    "eslint-plugin-prefer-arrow": "1.2.2",
+    "jasmine-core": "~4.2.0",
+    "jasmine-spec-reporter": "~5.0.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "ng-packagr": "^17.3.0",
+    "powerbi-report-authoring": "^1.1.1",
+    "typescript": "^5.4.5",
+    "zone.js": "~0.14.10"
+  }
+}

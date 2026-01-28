@@ -47,12 +47,9 @@ namespace Agility.OPSX.Api.PowerBIClient
                     HttpContext.Response.StatusCode = 400;
                     return configValidationResult;
                 }
-                List<Guid> reports = new List<Guid>();
                 
-                reports.Add(new Guid("ee29977f-17b5-47b7-a77c-b2d3e49a706d"));
-                reports.Add(new Guid("a32c45af-9500-4cbc-b582-e5871f8a2bfd"));
-                //EmbedParams embedParams = pbiEmbedService.GetEmbedParams(new Guid(powerBI.Value.WorkspaceId), new Guid(powerBI.Value.ReportId));
-                EmbedParams embedParams = pbiEmbedService.GetEmbedParams(new Guid(powerBI.Value.WorkspaceId), reports);
+                EmbedParams embedParams = pbiEmbedService.GetEmbedParams(new Guid(powerBI.Value.WorkspaceId), new Guid(powerBI.Value.ReportId));
+                //EmbedParams embedParams = pbiEmbedService.GetEmbedParams(new Guid(powerBI.Value.WorkspaceId), reports);
                 return JsonSerializer.Serialize<EmbedParams>(embedParams);
             }
             catch (Exception ex)
